@@ -137,21 +137,6 @@ streamlit run recommendation_dashboard.py
 │   ├── content_based.py
 │   ├── collaborative_simulated.py
 │   ├── hybrid.py
-├── personalized_services_logic.txt
-├── schema.sql
-├── requirements.txt
-├── recommendation_dashboard.py     # Optional Streamlit UI
-├── README.md
-
-.
-├── data/
-│   ├── shoes.csv
-│   ├── users.csv
-│   ├── interactions.csv
-├── Recommendation_System/
-│   ├── content_based.py
-│   ├── collaborative_simulated.py
-│   ├── hybrid.py
 ├── media/
 │   ├── recommendations_output.png
 │   ├── dashboard_home.png
