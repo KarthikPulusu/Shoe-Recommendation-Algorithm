@@ -128,6 +128,8 @@ python Recommendation_System/hybrid.py
 streamlit run recommendation_dashboard.py
 
 ## Project Structure
+
+```
 .
 ├── data/
 │   ├── shoes.csv
@@ -145,3 +147,5 @@ streamlit run recommendation_dashboard.py
 ├── requirements.txt
 ├── recommendation_dashboard.py     # Optional Streamlit UI
 ├── README.md
+```
+
