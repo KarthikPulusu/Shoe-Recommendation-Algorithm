@@ -1,0 +1,6 @@
+user_id,age,gender,typical_usage,preferred_weather,region
+1,25,Male,casual,rainy,Hyderabad
+2,30,Female,formal,sunny,Mumbai
+3,22,Male,casual,cold,Shimla
+4,28,Female,sport,humid,Chennai
+5,35,Male,formal,moderate,Bangalore

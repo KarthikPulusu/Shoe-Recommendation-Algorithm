@@ -1,0 +1,7 @@
+shoe_id,brand,model,type,material,color,size,care_level,weather_suitability
+101,Nike,AirMax,sneakers,mesh,black,9,low,moderate
+102,Adidas,Boost,sneakers,mesh,white,9,low,moderate
+103,Clarks,Trekker,boots,leather,brown,10,high,rainy
+104,Bata,Classic,flats,canvas,beige,8,low,sunny
+105,Woodland,Hunter,boots,leather,olive,10,high,cold
+106,Puma,Swift,sneakers,mesh,blue,9,low,humid

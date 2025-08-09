@@ -1,0 +1,12 @@
+user_id,shoe_id,interaction_type,date
+1,101,purchase,2024-07-05
+1,103,wishlist,2024-07-01
+1,105,view,2024-07-08
+2,104,purchase,2024-03-15
+2,102,view,2024-03-12
+3,103,purchase,2024-12-22
+3,105,view,2024-12-19
+4,106,wishlist,2024-05-10
+4,102,view,2024-05-08
+5,101,view,2024-09-02
+5,104,wishlist,2024-09-05

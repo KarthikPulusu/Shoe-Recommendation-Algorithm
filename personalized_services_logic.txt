@@ -1,0 +1,65 @@
+Personalized Service 1: Proactive Shoe Care reminder
+****************************************************************
+Goal: Notify users to care for leather shoes after frequent use
+
+Logic:
+-------
+For each user:
+   - Track interactions with leather shoes (type == 'boots' or material == 'leather')
+   - Count purchases + views over a time window (e.g., 30 days)
+   - If count > threshold (e.g., 3), send care reminder
+
+# Pseudocode:
+
+for user in users:
+    interactions = get_interactions(user_id=user.id)
+    leather_uses = filter(shoe.material == 'leather' or shoe.type == 'boots' for shoe in interactions)
+    if len(leather_uses) >= 3:
+        send_reminder(user.email, "Time to care for your leather shoes!")
+
+*********************************************************
+Personalized Service 2: Replacement Recommendation
+*********************************************************
+Goal: Recommend newer models if old shoes are still interacted with often
+
+Logic:
+---------
+For each user:
+   - Track shoes purchased more than 6 months ago
+   - If that shoe appears in views/wishlist frequently recently (last 1 month)
+   → Recommend similar but newer model
+
+# Pseudocode:
+for user in users:
+    past_purchases = get_purchases(user.id, before=today - 180 days)
+    for shoe in past_purchases:
+        recent_views = count_interactions(user.id, shoe.id, after=today - 30 days)
+        if recent_views > 2:
+            alt = recommend_similar_shoes(shoe.id)[0]  # top similar
+            notify(user.id, f"Try this updated model instead of {shoe.model}: {alt.model}")
+
+********************************************************************
+Personalized Service 3: Travel-Based Shoe Recommendation
+********************************************************************
+Goal: Suggest the right shoe based on upcoming travel trends, region, personal usage, and destination weather
+
+Use Case:
+If a user from Hyderabad is browsing shoes and their region shows rising travel to cold places like Shimla 
+(e.g., during winter holidays), and their typical usage is casual, recommend cold-weather shoes (like boots).
+
+Logic:
+----------
+For each user:
+   - Get their region and typical usage
+   - Check if upcoming seasonal trend or recent user interactions show high travel interest to specific regions
+   - For cold destinations (e.g., Shimla) in winter:
+       - Match user's usage with suitable shoes (e.g., boots for casual use in cold)
+       - Filter shoes from inventory with matching weather_suitability == "cold"
+       - Prioritize boots or leather shoes
+
+# Pseudocode:
+for user in users:
+    if user.region == "Hyderabad" and user.typical_usage == "casual":
+        if trending_destination == "Shimla" and upcoming_season == "winter":
+            recommended = filter(shoe for shoe in shoes if shoe.weather_suitability == "cold" and shoe.type in ["boots", "leather"])
+            notify(user.id, f"Planning a trip to Shimla? These shoes are perfect for winter travel!")
